@@ -1,0 +1,79 @@
+#include<iostream>
+#include<ctype.h>
+#include<string.h>
+#include<cstdio>
+#include<cmath>
+using namespace std;
+int main()
+{
+    long long int t,x,y,i,j,c,z,s1,s2;
+    float h1,h2;
+    cin>>t;
+    while(t--)
+    {
+        cin>>x>>y;
+        c=0;
+        h1=(log(x))/(log(2));
+        h2=(log(y))/(log(2));
+        s1=h1;
+        s2=h2;
+        if(s2>s1)
+        {
+            i=x;
+            for(j=y,z=0;z<(s2-s1);z++)
+            {
+                if(j!=1)
+                {
+                    if(j%2==0)
+                        j=j/2;
+                    else
+                        j=(j-1)/2;
+                    c++;
+                }
+            }
+        }
+        else if(s2<s1)
+        {
+            j=y;
+            for(i=x,z=0;z<(s1-s2);z++)
+            {
+                if(i!=1)
+                {
+                    if(i%2==0)
+                        i=i/2;
+                    else
+                        i=(i-1)/2;
+                    c++;
+                }
+            }
+        }
+        else
+        {
+            i=x;
+            j=y;
+        }
+        for(;;)
+        {
+            if(i==j)
+                break;
+            if(i!=1)
+            {
+                if(i%2==0)
+                    i=i/2;
+                else
+                    i=(i-1)/2;
+                c++;
+            }
+            if(j!=1)
+            {
+                if(j%2==0)
+                    j=j/2;
+                else
+                    j=(j-1)/2;
+                c++;
+            }
+        }
+        cout<<2*c<<endl;
+    }
+    return 0;
+}

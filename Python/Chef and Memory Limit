@@ -1,0 +1,13 @@
+t=input()
+for i in range(0,t):
+    n=input()
+    s=raw_input()
+    s=s.split()
+    c=0
+    a=0
+    for j in range(0,n):
+        if int(s[j])>a:
+            c=c+int(s[j])-a
+        a=int(s[j])
+    print c
+            

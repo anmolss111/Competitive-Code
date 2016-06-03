@@ -1,0 +1,25 @@
+import itertools
+s=raw_input()
+s=s.split()
+s=map(int,s)
+mod=1000000007
+x=s[0]
+y=s[1]
+z=s[2]
+sum=0
+for i in range(0,x+1):
+    for j in range(0,y+1):
+        for k in range(0,z+1):
+            a=[4]*i
+            b=[5]*j
+            c=[6]*k
+            a.extend(b)
+            a.extend(c)
+            l=list(itertools.permutations(a))
+            l=set(l)
+            l=list(l)
+            for m in range(0,len(l)):
+                n=''.join(map(str,l[m]))
+                if n != '':
+                    sum=(sum+(int(n))%mod)%mod
+print sum

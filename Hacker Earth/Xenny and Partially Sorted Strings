@@ -1,0 +1,16 @@
+t=input()
+for k in range(0,t):
+    s=raw_input()
+    s=map(int,s.split())
+    n=s[0]
+    k=s[1]
+    m=s[2]
+    s=[]
+    sm=[]
+    for i in range(0,n):
+        s1=raw_input()
+        s2=s1[0:m]+str(i)
+        sm.append(s2)
+        s.append(s1)
+    sm.sort()
+    print s[int(sm[k-1][m:len(sm[k-1])])]

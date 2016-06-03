@@ -1,0 +1,11 @@
+s=raw_input()
+a=[0 for i in range(0,256)]
+for i in range(0,len(s)):
+    a[ord(s[i])]+=1
+max=0
+ind=-1
+for i in range(0,256):
+    if max<a[i]:
+        max=a[i]
+        ind=i
+print chr(ind),max

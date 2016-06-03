@@ -1,0 +1,19 @@
+x=[]
+f=0
+for i in range(0,8):
+    s=raw_input()
+    if f==1:
+        continue
+    x.append(s.index('*'))
+    for j in range(0,len(x)-1):
+        if x[j]==x[len(x)-1]:
+            f=1
+            break
+        if (((len(x)-1-j)==(x[len(x)-1]-x[j])) or ((len(x)-1-j)==(-x[len(x)-1]+x[j]))):
+            f=1
+            break
+if f==1:
+    print 'invalid'
+else:
+    print 'valid'
+        

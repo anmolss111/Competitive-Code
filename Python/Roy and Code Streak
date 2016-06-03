@@ -1,0 +1,23 @@
+t=input()
+for i in range(0,t):
+    n=input()
+    b=[]
+    for j in range(0,n):
+        s=raw_input()
+        a=s.split()
+        b.append(a)
+    d=0
+    e=[]
+    j=0
+    for j in range(0,n):
+        c=0
+        while b[j][1]=='1':
+            if b[j][0] not in e:
+                c=c+1
+                e.append(b[j][0])
+            j=j+1
+            if j==n:
+                break
+        if c>d:
+            d=c
+    print d

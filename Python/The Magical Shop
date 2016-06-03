@@ -1,0 +1,13 @@
+s=raw_input()
+s=s.split()
+s=map(int,s)
+a=s[0]
+b=s[1]
+s=raw_input()
+c=0
+for i in range(0,len(s)):
+    if s[i]=='1':
+        k=pow(2,i)
+        c=(c+pow(a,k,b))%b
+print c
+        

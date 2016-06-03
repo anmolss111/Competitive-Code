@@ -1,0 +1,19 @@
+n=input()
+for j in range(0,n):
+    f=0
+    t=raw_input()
+    if len(t)==10:
+        for i in range(0,10):
+            if ord(t[i])<48 or ord(t[i])>57:
+                f=1;
+                break;
+        if (t[0]=='9' or t[0]=='8' or t[0]=='7') and f==0:
+            print 'YES'
+        else:
+            f=1
+    else:
+        f=1
+    if f==1:
+        print 'NO'
+                    
+                

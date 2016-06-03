@@ -1,0 +1,30 @@
+t=input()
+for i in range(0,t):
+    print 
+    print 'Case #'+str(i+1)+':'
+    a=[]
+    b=[]
+    x=[]
+    y=[]
+    flag=0
+    for j in range(0,9):
+        s=raw_input()
+        s=s.split()
+        a.append(s)
+        s=set(s)
+        if len(s)<9:
+            flag=1
+            x.append(j)
+    for j in range(0,9):
+        c=[]
+        for k in range(0,9):
+            c.append(a[k][j])
+        b.append(c)
+        c=set(c)
+        if len(c)<9:
+            flag=1
+            y.append(j)
+    print x,y
+    if flag==0:
+        print 'Serendipity'
+    

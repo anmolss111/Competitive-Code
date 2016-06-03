@@ -1,0 +1,50 @@
+#include<iostream>
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+    long int i,t,p,q,r,j,n,k,c,temp,a,b,e,f;
+    cin>>i>>t>>p>>q;
+    temp=i;
+    cin>>r;
+    for(j=0;j<r;j++)
+    {
+        i=temp;
+        cin>>n;
+        c=0;
+        for(k=0;k<n;k++)
+        {
+            if(i<=t)
+            {
+                a=t-i;
+                if(a>p)
+                {
+                    b=(a/p);
+                    i=i+b*p;
+                    c=c+b;
+                    k=k+b;
+                }
+                else
+                {
+                    i=i+p;
+                    c++;
+                }
+            }
+            else
+            {
+                e=i-t;
+                if(e>q)
+                {
+                    f=(e/q);
+                    i=i-f*p;
+                    k=k+f;
+                }
+                else
+                {
+                    i=i-q;
+                }
+            }
+        }
+        cout<<c<<endl;
+    }
+}

@@ -1,0 +1,10 @@
+t=input()
+for i in range(0,t):
+    n=input()
+    a=n
+    if a%2==0:
+        a=a/2
+        print a*(n-1)
+    else:
+        a=(a-1)/2
+        print a*n

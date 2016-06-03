@@ -1,0 +1,19 @@
+f=[]
+def fact(n):
+    if n==0 or n==1:
+        f.append(1)
+    else:
+        e=n*f[n-1]
+        f.append(e)
+for i in range(0,101):
+    fact(i)
+t=input()
+for i in range(0,t):
+    n=input()
+    c=0
+    for i in range(0,n):
+        e=f[n-i]
+        g=f[i]*f[n-2*i]
+        e=e/g
+        c=c+e
+    print c

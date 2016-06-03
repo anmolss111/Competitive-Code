@@ -1,0 +1,10 @@
+n=input()
+s=raw_input()
+s=s.split()
+s=map(int,s)
+sum=s[n-1]/s[n]
+sum=-sum
+pro=s[0]/s[n]
+if n%2==1:
+    pro=-pro
+print sum,pro

@@ -1,0 +1,29 @@
+t=input()
+for i in range(0,t):
+    s=raw_input()
+    s=s.split()
+    n=int(s[0])
+    k=int(s[1])
+    s=raw_input()
+    s=s.split()
+    s=map(int,s)
+    t=k
+    c=1
+    for j in range(0,n):
+        if t==0:
+            c=c+1
+            t=k
+        if t>=s[j]:
+            t=t-s[j]
+        else:
+            s[j]=s[j]-t
+            if s[j]%k==0:
+                d=s[j]/k
+                t=0
+            else:
+                d=s[j]/k+1
+                t=k-s[j]%k
+            c=c+d
+        if t>0:
+            t=t-1
+    print c

@@ -1,0 +1,40 @@
+from fractions import Fraction
+import math
+def dis(a,b):
+    print "%.2f" % (a),
+    if b==0:
+        print
+    elif b>0:
+        print '+',
+        print "%.2f%s" % (b,'i')
+    else:
+        print '-',
+        print "%.2f%s" % (-b,'i')
+s=raw_input()
+l=s.split()
+a1=float(l[0])
+b1=float(l[1])
+s=raw_input()
+l=s.split()
+a2=float(l[0])
+b2=float(l[1])
+a=a1+a2
+b=b1+b2
+dis(a,b)
+a=a1-a2
+b=b1-b2
+dis(a,b)
+a=a1*a2-b1*b2
+b=a1*b2+b1*a2
+dis(a,b)
+c=(a2*a2+b2*b2)
+d=(a1*a2+b1*b2)
+f=d/c
+e=(a2*b1-b2*a1)
+g=e/c;
+dis(float(f),float(g))
+h=a1*a1+b1*b1
+h=math.sqrt(h)
+print "%.2f" % (h)
+c=math.sqrt(c)
+print "%.2f" % (c)
