@@ -1,17 +1,17 @@
-inputArray = map(int,raw_input().split())
-s,t = inputArray[0],inputArray[1]
-inputArray = map(int,raw_input().split())
-a,b = inputArray[0],inputArray[1]
-inputArray = map(int,raw_input().split())
-m,n = inputArray[0],inputArray[1]
-inputArray = map(int,raw_input().split())
-c = [0,0]
-for i in range(0,m):
-    if(a + inputArray[i] >= s and a + inputArray[i] <= t):
-        c[0] += 1
-inputArray = map(int,raw_input().split())
-for i in range(0,n):
-    if(b + inputArray[i] >= s and b + inputArray[i] <= t):
-        c[1] += 1
-print c[0]
-print c[1]
+import matplotlib.pyplot as plt
+import numpy as np
+import scipy.misc
+from scipy import ndimage
+import PIL
+from PIL import ImageFont
+from PIL import Image
+from PIL import ImageDraw 
+import skimage
+
+#im = ndimage.imread('abc.jpg')
+im = Image.open('abc.jpg','r').convert()
+
+skimage.util.random_noise(image, mode='salt', seed=None, clip=True, **kwargs)
+
+#J = imnoise(im,'salt & pepper',0.02);
+figure.imshow(J)
