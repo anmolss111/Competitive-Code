@@ -16,10 +16,10 @@ for k in range(0,t):
 		else:
 			a[i] = a[i]/2
 	if(count > 1):
-		print '-1'
+		print ('-1')
 	else:
 		x = fact[int(len(s)/2)]
 		for i in range(0,26):
 			if(i != j):
 				x = x/fact[a[i]]
-		print x
+		print (x)
